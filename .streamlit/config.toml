@@ -16,3 +16,11 @@ textColor = '#FFFFFF'
 # Accepted values (serif | sans serif | monospace)
 # Default: "sans serif"
 font = "sans serif"
+
+[browser]
+# So that they do not have access to my usage of the library
+gatherUsageStats = false
+
+[server]
+port = 7777
+baseUrlPath = "cyberclolors.lightny.me"
