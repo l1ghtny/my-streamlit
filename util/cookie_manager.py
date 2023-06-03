@@ -16,5 +16,6 @@ if not cookies.ready():
     # Wait for the component to load and send us current cookies.
     st.stop()
 
+
 def get():
     return cookies
