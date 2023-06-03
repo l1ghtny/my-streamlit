@@ -1,7 +1,10 @@
-import streamlit as st, os
+import os
+import streamlit as st
+from dotenv import load_dotenv
 from util.encrypted_cookie_manager import EncryptedCookieManager
+load_dotenv()
 
-client_secret = os.environ['DISCORD_CLIENT_SECRET']
+client_secret = os.getenv("DISCORD_CLIENT_SECRET")
 
 # This should be on top of your script
 cookies = EncryptedCookieManager(
