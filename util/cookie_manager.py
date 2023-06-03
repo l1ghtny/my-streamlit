@@ -2,6 +2,7 @@ import os
 import streamlit as st
 from dotenv import load_dotenv
 from util.encrypted_cookie_manager import EncryptedCookieManager
+
 load_dotenv()
 
 client_secret = os.getenv("DISCORD_CLIENT_SECRET")

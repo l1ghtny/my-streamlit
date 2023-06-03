@@ -1,8 +1,10 @@
-import os, json
+import json
+import os
 from typing import cast, Dict, Any
+
 from httpx_oauth.clients.discord import DiscordOAuth2, PROFILE_ENDPOINT
-from httpx_oauth.oauth2 import OAuth2Token
 from httpx_oauth.errors import GetIdEmailError
+from httpx_oauth.oauth2 import OAuth2Token
 
 client_id = os.environ['DISCORD_CLIENT_ID']
 client_secret = os.environ['DISCORD_CLIENT_SECRET']

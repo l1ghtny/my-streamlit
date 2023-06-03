@@ -1,5 +1,5 @@
 import streamlit as st
-from auth import logout_button
+from authentification import logout_button
 from util import cookie_manager
 
 def render():

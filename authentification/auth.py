@@ -1,7 +1,10 @@
-import streamlit as st, json, os, asyncio
+import asyncio
+import json
+import streamlit as st
 
-from auth import discord_oauth
+from authentification import discord_oauth
 from util import cookie_manager
+
 
 def is_logged_in():
     cookies = cookie_manager.get()
