@@ -9,7 +9,7 @@ if not auth.is_logged_in():
 else:
     sidebar.render()
 
-    if bot_run.shnot "page" in st.session_state:
+    if not "page" in st.session_state:
         home_page.render()
 
     else:
