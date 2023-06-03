@@ -8,7 +8,7 @@ def render():
     with st.sidebar:
         st.title('Welcome to my Streamlit App!')
         st.write("User ID: ", cookies.get('user_id'))
-        st.write("Username: ", cookies.get('user_display_username'))
+        st.write("Username: ", cookies.get('user_display_name'))
 
         if st.button('Names'):
             st.session_state['page'] = 'names'
