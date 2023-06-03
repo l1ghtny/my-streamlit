@@ -30,7 +30,7 @@ im_example = Image.open("images/example.png")
 # ---- HEADER SECTION ----
 with st.container():
     st.subheader("Привет, я Антон :wave:")
-    st.title("AЯ тут занимаюсь херней всякой")
+    st.title("Я тут занимаюсь херней всякой")
     st.write(
         "Решил попробовать набросать на коленке вот такой вот сайтик, потому что почему бы и нет"
     )
