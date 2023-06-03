@@ -2,6 +2,7 @@ import streamlit as st
 from authentification import logout_button
 from util import cookie_manager
 
+
 def render():
     cookies = cookie_manager.get()
     with st.sidebar:
@@ -14,6 +15,5 @@ def render():
 
         if st.button('Faces'):
             st.session_state['page'] = 'faces'
-
 
         logout_button.render()

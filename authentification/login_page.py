@@ -1,7 +1,7 @@
 import asyncio
 import streamlit as st
 
-from auth import discord_oauth
+from authentification import discord_oauth
 
 
 def render():
