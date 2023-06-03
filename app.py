@@ -3,6 +3,9 @@ from components import name_form, faces_form, sidebar, home_page
 from auth import auth
 from auth import login_page
 
+# Find more emojis here: https://www.webfx.com/tools/emoji-cheat-sheet/
+st.set_page_config(page_title="My Webpage", page_icon=":tada:", layout="wide")
+
 if not auth.is_logged_in():
     login_page.render()
 
