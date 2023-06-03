@@ -52,8 +52,10 @@ class MyDiscordOAuth2(DiscordOAuth2):
 
 client = MyDiscordOAuth2(client_id, client_secret)
 
+
 def get_client():
     return client
+
 
 async def write_authorization_url():
     client = get_client()
