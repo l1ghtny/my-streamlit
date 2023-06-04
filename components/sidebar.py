@@ -20,3 +20,4 @@ def render():
             login_button.render()
         else:
             logout_button.render()
+            st.experimental_rerun()
