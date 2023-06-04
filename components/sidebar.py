@@ -7,11 +7,11 @@ def render():
     cookies = cookie_manager.get()
     with st.sidebar:
         if not auth.is_logged_in():
-            st.title(f'Привет, {cookies.get("username")}')
-            st.write("User ID: ", cookies.get('user_id'))
-            st.write("Username: ", cookies.get('user_username'))
+            st.title(f'Привет!')
+            # st.write("User ID: ", cookies.get('user_id'))
+            # st.write("Username: ", cookies.get('user_username'))
         else:
-            st.title('Привет!')
+            st.title(f'Привет, {cookies.get("username")}')
             st.write("User ID: ", cookies.get('user_id'))
             st.write("Username: ", cookies.get('user_username'))
 
