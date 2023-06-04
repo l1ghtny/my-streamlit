@@ -1,6 +1,8 @@
 import streamlit as st
 from components import name_form, faces_form, sidebar, home_page
 
+st.set_page_config(page_title="CyberColors", page_icon=":tada:", layout="wide")
+
 sidebar.render()
 
 if "page" not in st.session_state:

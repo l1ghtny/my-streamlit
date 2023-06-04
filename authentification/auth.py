@@ -38,6 +38,7 @@ def is_logged_in():
 
                     cookies['user_id'] = user_id
                     cookies['user_username'] = user_data['username'] + '#' + user_data['discriminator']
+                    cookies['username'] = user_data['username']
 
                     cookies.save()
                     st.experimental_set_query_params()
