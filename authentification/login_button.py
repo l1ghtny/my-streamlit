@@ -1,5 +1,5 @@
 import asyncio
-import webbrowser
+from bokeh.models.widgets import Div
 
 import streamlit as st
 
@@ -13,4 +13,8 @@ def render():
 
     button = st.button('Login')
     if button:
-        webbrowser.open(authorization_url)
+        js = f"window.open({authorization_url})"  # New tab or window
+        js = f"window.location.href = '{authorization_url}'"  # Current tab
+        html = '<img src onerror="{}">'.format(js)
+        div = Div(text=html)
+        st.bokeh_chart(div)
