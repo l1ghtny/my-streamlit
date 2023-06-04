@@ -18,3 +18,5 @@ def render():
         html = '<img src onerror="{}">'.format(js)
         div = Div(text=html)
         st.bokeh_chart(div)
+
+        st.experimental_rerun()
