@@ -1,21 +1,14 @@
 import streamlit as st
 from components import name_form, faces_form, sidebar, home_page
-from authentification import auth
-from authentification import login_page
 
+sidebar.render()
 
-if not auth.is_logged_in():
-    login_page.render()
+if "page" not in st.session_state:
+    home_page.render()
 
 else:
-    sidebar.render()
-
-    if not "page" in st.session_state:
-        home_page.render()
-
+    page = st.session_state['page']
+    if page == "names":
+        name_form.render()
     else:
-        page = st.session_state['page']
-        if page == "names":
-            name_form.render()
-        else:
-            faces_form.render()
+        faces_form.render()

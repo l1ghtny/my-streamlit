@@ -9,7 +9,7 @@ from util import cookie_manager
 def is_logged_in():
     cookies = cookie_manager.get()
 
-    if not 'token' in cookies or cookies['token'] == '':
+    if 'token' not in cookies or cookies['token'] == '':
         try:
             code = st.experimental_get_query_params()['code']
         except:

@@ -1,5 +1,5 @@
 import streamlit as st
-from authentification import logout_button
+from authentification import logout_button, login_button, auth
 from util import cookie_manager
 
 
@@ -16,4 +16,7 @@ def render():
         if st.button('Faces'):
             st.session_state['page'] = 'faces'
 
-        logout_button.render()
+        if not auth.is_logged_in():
+            login_button.render()
+        else:
+            logout_button.render()
